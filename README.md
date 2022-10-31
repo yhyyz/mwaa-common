@@ -1,3 +1,6 @@
+### MWAA COMMON
+* 使用MWAA(Airflow)调度Redshfit SQL的例子，SQL文件存储放到S3,使用RedshiftSQLOperator执行SQL
+
 #### 本地pycharm python3环境安装依赖
 ```shell
 pip install apache-airflow==2.2.2 apache-airflow-providers-amazon==2.4.0 \
