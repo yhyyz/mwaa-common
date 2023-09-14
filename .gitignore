@@ -18,6 +18,7 @@ venv/
 # idea
 .idea/
 *.iml
+zlocal/
 
 # building
 target/

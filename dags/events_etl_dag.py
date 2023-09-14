@@ -1,4 +1,4 @@
-from airflow.providers.amazon.aws.operators.redshift import RedshiftSQLOperator
+from airflow.providers.amazon.aws.operators.redshift_sql import RedshiftSQLOperator
 from datetime import datetime
 from airflow import DAG
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
@@ -6,8 +6,11 @@ import os
 from datetime import timedelta
 from airflow.models import Variable
 from airflow.utils.dates import days_ago
-from airflow.operators.dummy import DummyOperator
+from airflow.operators.empty import EmptyOperator
 import re
+import logging
+import pendulum
+from airflow.operators.python import PythonOperator
 
 DAG_ID = os.path.basename(__file__).replace(".py", "")
 
@@ -45,18 +48,33 @@ def get_sql_content(key, bucket_name):
     return list(map(lambda x: x + ";", sql_list_trim))
 
 
+def print_args(**kwargs):
+    for k, v in kwargs.items():
+        logging.info(f'{k}({type(v)}): {v}')
+
+
+def ds_macro_format(execution_date:pendulum.DateTime, days):
+    # days
+    return execution_date.add(days=days).strftime("%Y-%m-%d")
+
+
+user_macros = {
+    'biz_date': ds_macro_format
+}
 with DAG(
         dag_id=DAG_ID,
         description="redshift sql etl",
         default_args=DEFAULT_ARGS,
         dagrun_timeout=timedelta(hours=24),
-        start_date=days_ago(1),
+        start_date=days_ago(100),
         catchup=False,
-        schedule_interval=None,
+        user_defined_macros=user_macros,
+        schedule_interval='@daily',
+        # schedule_interval=None,
         tags=['redshift_sql'],
 ) as dag:
-    begin = DummyOperator(task_id="begin")
-    end = DummyOperator(task_id="end")
+    begin = EmptyOperator(task_id="begin")
+    end = EmptyOperator(task_id="end")
 
     # create ods table
     task_ods_create_table = RedshiftSQLOperator(
@@ -80,4 +98,26 @@ with DAG(
         params={'color': 'Red'},
     )
 
-    begin >> task_ods_create_table >> task_ods_insert_data >> task_ods_ctas_filter >> end
+    # overwrite
+    task_ods_overwrite = RedshiftSQLOperator(
+        redshift_conn_id="redshift_default",
+        task_id='task_ods_overwrite',
+        sql=get_sql_content("sqls/ods_overwrite_data.sql", sql_bucket),
+        params={'color': 'Red'},
+    )
+
+    python_operator_task = PythonOperator(
+        task_id='task_python',
+        python_callable=print_args,
+        provide_context=True
+    )
+
+    # ods_date
+    task_ods_date = RedshiftSQLOperator(
+        redshift_conn_id="redshift_default",
+        task_id='task_ods_date',
+        sql=get_sql_content("sqls/ods_date.sql", sql_bucket),
+    )
+
+
+    begin >> python_operator_task >> task_ods_date >> task_ods_create_table >> task_ods_insert_data >> task_ods_ctas_filter >> task_ods_overwrite >> end
