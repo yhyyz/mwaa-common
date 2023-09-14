@@ -1,0 +1,693 @@
+2023-09-13 20:08:27,261 INFO - Starting the scheduler
+2023-09-13 20:08:27,263 INFO - Processing each file at most -1 times
+2023-09-13 20:08:27,268 INFO - Loaded executor: SequentialExecutor
+2023-09-13 20:08:27,276 INFO - Launched DagFileProcessorManager with pid: 42186
+2023-09-13 20:08:27,280 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:13:29,148 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:18:30,978 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:25:57,764 INFO - Starting the scheduler
+2023-09-13 20:25:57,766 INFO - Processing each file at most -1 times
+2023-09-13 20:25:57,770 INFO - Loaded executor: SequentialExecutor
+2023-09-13 20:25:57,777 INFO - Launched DagFileProcessorManager with pid: 47143
+2023-09-13 20:25:57,784 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:25:57,810 INFO - Marked 1 SchedulerJob instances as failed
+2023-09-13 20:30:58,521 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:35:59,989 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:41:01,593 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:42:32,815 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T12:42:27.991376+00:00 [scheduled]>
+2023-09-13 20:42:32,818 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 20:42:32,818 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T12:42:27.991376+00:00 [scheduled]>
+2023-09-13 20:42:32,823 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-09-13T12:42:27.991376+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2023-09-13 20:42:32,824 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T12:42:27.991376+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:42:32,826 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T12:42:27.991376+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:42:42,692 INFO - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-09-13T12:42:27.991376+00:00 exited with status success for try_number 1
+2023-09-13 20:42:42,705 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-09-13T12:42:27.991376+00:00, map_index=-1, run_start_date=2023-09-13 12:42:41.774169+00:00, run_end_date=2023-09-13 12:42:42.220977+00:00, run_duration=0.446808, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 12:42:32.820445+00:00, queued_by_job_id=2, pid=54149
+2023-09-13 20:42:49,684 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 12:42:27.991376+00:00: manual__2023-09-13T12:42:27.991376+00:00, state:running, queued_at: 2023-09-13 12:42:28.030624+00:00. externally triggered: True> failed
+2023-09-13 20:42:49,686 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 12:42:27.991376+00:00, run_id=manual__2023-09-13T12:42:27.991376+00:00, run_start_date=2023-09-13 12:42:30.332879+00:00, run_end_date=2023-09-13 12:42:49.685935+00:00, run_duration=19.353056, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 12:42:27.991376+00:00, data_interval_end=2023-09-13 12:42:27.991376+00:00, dag_hash=59ec67e1ed3fb588fbaa8cae4c511338
+2023-09-13 20:42:49,691 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-13 20:46:03,354 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:49:11,832 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T12:49:07.117428+00:00 [scheduled]>
+2023-09-13 20:49:11,833 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 20:49:11,834 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T12:49:07.117428+00:00 [scheduled]>
+2023-09-13 20:49:11,837 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-09-13T12:49:07.117428+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2023-09-13 20:49:11,838 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T12:49:07.117428+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:49:11,840 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T12:49:07.117428+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:49:28,050 INFO - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-09-13T12:49:07.117428+00:00 exited with status success for try_number 1
+2023-09-13 20:49:28,059 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-09-13T12:49:07.117428+00:00, map_index=-1, run_start_date=2023-09-13 12:49:21.361249+00:00, run_end_date=2023-09-13 12:49:27.552702+00:00, run_duration=6.191453, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 12:49:11.835549+00:00, queued_by_job_id=2, pid=55329
+2023-09-13 20:49:30,671 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-13T12:49:07.117428+00:00 [scheduled]>
+2023-09-13 20:49:30,673 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 20:49:30,675 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-13T12:49:07.117428+00:00 [scheduled]>
+2023-09-13 20:49:30,678 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-09-13T12:49:07.117428+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2023-09-13 20:49:30,680 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-13T12:49:07.117428+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:49:30,682 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-13T12:49:07.117428+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:49:50,765 INFO - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-09-13T12:49:07.117428+00:00 exited with status success for try_number 1
+2023-09-13 20:49:50,773 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-09-13T12:49:07.117428+00:00, map_index=-1, run_start_date=2023-09-13 12:49:39.818499+00:00, run_end_date=2023-09-13 12:49:50.160961+00:00, run_duration=10.342462, state=success, executor_state=success, try_number=1, max_tries=0, job_id=5, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 12:49:30.676660+00:00, queued_by_job_id=2, pid=55399
+2023-09-13 20:49:53,499 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-13T12:49:07.117428+00:00 [scheduled]>
+2023-09-13 20:49:53,500 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 20:49:53,501 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-13T12:49:07.117428+00:00 [scheduled]>
+2023-09-13 20:49:53,505 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-09-13T12:49:07.117428+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2023-09-13 20:49:53,506 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-13T12:49:07.117428+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:49:53,508 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-13T12:49:07.117428+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:50:10,216 INFO - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-09-13T12:49:07.117428+00:00 exited with status success for try_number 1
+2023-09-13 20:50:10,224 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-09-13T12:49:07.117428+00:00, map_index=-1, run_start_date=2023-09-13 12:50:02.667524+00:00, run_end_date=2023-09-13 12:50:09.793705+00:00, run_duration=7.126181, state=success, executor_state=success, try_number=1, max_tries=0, job_id=6, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 12:49:53.503641+00:00, queued_by_job_id=2, pid=55464
+2023-09-13 20:50:12,263 INFO - Marking run <DagRun events_etl_dag @ 2023-09-13 12:49:07.117428+00:00: manual__2023-09-13T12:49:07.117428+00:00, state:running, queued_at: 2023-09-13 12:49:07.133487+00:00. externally triggered: True> successful
+2023-09-13 20:50:12,265 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 12:49:07.117428+00:00, run_id=manual__2023-09-13T12:49:07.117428+00:00, run_start_date=2023-09-13 12:49:08.686475+00:00, run_end_date=2023-09-13 12:50:12.265364+00:00, run_duration=63.578889, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 12:49:07.117428+00:00, data_interval_end=2023-09-13 12:49:07.117428+00:00, dag_hash=59ec67e1ed3fb588fbaa8cae4c511338
+2023-09-13 20:50:12,274 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-13 20:51:05,236 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:56:05,583 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 20:57:12,408 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-13T12:57:09.175599+00:00 [scheduled]>
+2023-09-13 20:57:12,409 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 20:57:12,409 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-13T12:57:09.175599+00:00 [scheduled]>
+2023-09-13 20:57:12,414 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_overwrite', run_id='manual__2023-09-13T12:57:09.175599+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-09-13 20:57:12,414 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-13T12:57:09.175599+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:57:12,417 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-13T12:57:09.175599+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:57:28,770 INFO - Executor reports execution of events_etl_dag.task_ods_overwrite run_id=manual__2023-09-13T12:57:09.175599+00:00 exited with status success for try_number 1
+2023-09-13 20:57:28,780 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_overwrite, run_id=manual__2023-09-13T12:57:09.175599+00:00, map_index=-1, run_start_date=None, run_end_date=None, run_duration=None, state=queued, executor_state=success, try_number=1, max_tries=0, job_id=None, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 12:57:12.410853+00:00, queued_by_job_id=2, pid=None
+2023-09-13 20:57:28,781 ERROR - Executor reports task instance <TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-13T12:57:09.175599+00:00 [queued]> finished (success) although the task says its queued. (Info: None) Was the task killed externally?
+2023-09-13 20:57:28,786 ERROR - Executor reports task instance <TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-13T12:57:09.175599+00:00 [queued]> finished (success) although the task says its queued. (Info: None) Was the task killed externally?
+2023-09-13 20:57:28,876 INFO - Marking task as FAILED. dag_id=events_etl_dag, task_id=task_ods_overwrite, execution_date=20230913T125709, start_date=, end_date=20230913T125728
+2023-09-13 20:57:30,887 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T12:57:09.175599+00:00 [scheduled]>
+2023-09-13 20:57:30,888 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 20:57:30,889 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T12:57:09.175599+00:00 [scheduled]>
+2023-09-13 20:57:30,892 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-09-13T12:57:09.175599+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2023-09-13 20:57:30,893 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T12:57:09.175599+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:57:30,895 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T12:57:09.175599+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:57:51,445 INFO - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-09-13T12:57:09.175599+00:00 exited with status success for try_number 1
+2023-09-13 20:57:51,454 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-09-13T12:57:09.175599+00:00, map_index=-1, run_start_date=2023-09-13 12:57:43.476708+00:00, run_end_date=2023-09-13 12:57:50.954464+00:00, run_duration=7.477756, state=success, executor_state=success, try_number=1, max_tries=0, job_id=8, pool=default_pool, queue=default, priority_weight=5, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 12:57:30.891309+00:00, queued_by_job_id=2, pid=56637
+2023-09-13 20:57:53,372 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-13T12:57:09.175599+00:00 [scheduled]>
+2023-09-13 20:57:53,373 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 20:57:53,373 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-13T12:57:09.175599+00:00 [scheduled]>
+2023-09-13 20:57:53,376 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-09-13T12:57:09.175599+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2023-09-13 20:57:53,377 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-13T12:57:09.175599+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:57:53,379 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-13T12:57:09.175599+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:58:19,147 INFO - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-09-13T12:57:09.175599+00:00 exited with status success for try_number 1
+2023-09-13 20:58:19,158 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-09-13T12:57:09.175599+00:00, map_index=-1, run_start_date=2023-09-13 12:58:06.200626+00:00, run_end_date=2023-09-13 12:58:18.676158+00:00, run_duration=12.475532, state=success, executor_state=success, try_number=1, max_tries=0, job_id=9, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 12:57:53.374980+00:00, queued_by_job_id=2, pid=56653
+2023-09-13 20:58:21,825 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-13T12:57:09.175599+00:00 [scheduled]>
+2023-09-13 20:58:21,826 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 20:58:21,826 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-13T12:57:09.175599+00:00 [scheduled]>
+2023-09-13 20:58:21,829 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-09-13T12:57:09.175599+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2023-09-13 20:58:21,830 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-13T12:57:09.175599+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:58:21,832 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-13T12:57:09.175599+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 20:58:37,128 INFO - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-09-13T12:57:09.175599+00:00 exited with status success for try_number 1
+2023-09-13 20:58:37,139 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-09-13T12:57:09.175599+00:00, map_index=-1, run_start_date=2023-09-13 12:58:36.568339+00:00, run_end_date=2023-09-13 12:58:36.681354+00:00, run_duration=0.113015, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=10, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 12:58:21.827841+00:00, queued_by_job_id=2, pid=57058
+2023-09-13 20:58:39,826 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 12:57:09.175599+00:00: manual__2023-09-13T12:57:09.175599+00:00, state:running, queued_at: 2023-09-13 12:57:09.282376+00:00. externally triggered: True> failed
+2023-09-13 20:58:39,826 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 12:57:09.175599+00:00, run_id=manual__2023-09-13T12:57:09.175599+00:00, run_start_date=2023-09-13 12:57:12.372750+00:00, run_end_date=2023-09-13 12:58:39.826788+00:00, run_duration=87.454038, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 12:57:09.175599+00:00, data_interval_end=2023-09-13 12:57:09.175599+00:00, dag_hash=6960ef81336862300d2c9f5c336b0958
+2023-09-13 20:58:39,829 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-13 21:00:27,364 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T13:00:04.905145+00:00 [scheduled]>
+2023-09-13 21:00:27,366 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 21:00:27,367 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T13:00:04.905145+00:00 [scheduled]>
+2023-09-13 21:00:27,370 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-09-13T13:00:04.905145+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2023-09-13 21:00:27,371 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T13:00:04.905145+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:00:27,373 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T13:00:04.905145+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:00:48,195 INFO - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-09-13T13:00:04.905145+00:00 exited with status success for try_number 1
+2023-09-13 21:00:48,204 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-09-13T13:00:04.905145+00:00, map_index=-1, run_start_date=2023-09-13 13:00:40.390468+00:00, run_end_date=2023-09-13 13:00:47.688059+00:00, run_duration=7.297591, state=success, executor_state=success, try_number=1, max_tries=0, job_id=11, pool=default_pool, queue=default, priority_weight=5, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 13:00:27.368213+00:00, queued_by_job_id=2, pid=57255
+2023-09-13 21:00:50,680 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-13T13:00:04.905145+00:00 [scheduled]>
+2023-09-13 21:00:50,681 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 21:00:50,681 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-13T13:00:04.905145+00:00 [scheduled]>
+2023-09-13 21:00:50,684 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-09-13T13:00:04.905145+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2023-09-13 21:00:50,685 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-13T13:00:04.905145+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:00:50,687 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-13T13:00:04.905145+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:01:18,256 INFO - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-09-13T13:00:04.905145+00:00 exited with status success for try_number 1
+2023-09-13 21:01:18,266 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-09-13T13:00:04.905145+00:00, map_index=-1, run_start_date=2023-09-13 13:01:06.055564+00:00, run_end_date=2023-09-13 13:01:17.787271+00:00, run_duration=11.731707, state=success, executor_state=success, try_number=1, max_tries=0, job_id=12, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 13:00:50.683017+00:00, queued_by_job_id=2, pid=57310
+2023-09-13 21:01:18,296 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:01:18,300 INFO - Marked 1 SchedulerJob instances as failed
+2023-09-13 21:01:20,234 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-13T13:00:04.905145+00:00 [scheduled]>
+2023-09-13 21:01:20,235 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 21:01:20,235 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-13T13:00:04.905145+00:00 [scheduled]>
+2023-09-13 21:01:20,239 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-09-13T13:00:04.905145+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2023-09-13 21:01:20,240 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-13T13:00:04.905145+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:01:20,243 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-13T13:00:04.905145+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:01:40,958 INFO - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-09-13T13:00:04.905145+00:00 exited with status success for try_number 1
+2023-09-13 21:01:40,967 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-09-13T13:00:04.905145+00:00, map_index=-1, run_start_date=2023-09-13 13:01:32.149282+00:00, run_end_date=2023-09-13 13:01:40.453187+00:00, run_duration=8.303905, state=success, executor_state=success, try_number=1, max_tries=0, job_id=13, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 13:01:20.237382+00:00, queued_by_job_id=2, pid=57336
+2023-09-13 21:01:42,985 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-13T13:00:04.905145+00:00 [scheduled]>
+2023-09-13 21:01:42,986 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 21:01:42,987 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-13T13:00:04.905145+00:00 [scheduled]>
+2023-09-13 21:01:42,991 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_overwrite', run_id='manual__2023-09-13T13:00:04.905145+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-09-13 21:01:42,991 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-13T13:00:04.905145+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:01:42,994 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-13T13:00:04.905145+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:02:15,894 INFO - Executor reports execution of events_etl_dag.task_ods_overwrite run_id=manual__2023-09-13T13:00:04.905145+00:00 exited with status success for try_number 1
+2023-09-13 21:02:15,904 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_overwrite, run_id=manual__2023-09-13T13:00:04.905145+00:00, map_index=-1, run_start_date=2023-09-13 13:01:56.960442+00:00, run_end_date=2023-09-13 13:02:15.361245+00:00, run_duration=18.400803, state=success, executor_state=success, try_number=1, max_tries=0, job_id=14, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 13:01:42.989043+00:00, queued_by_job_id=2, pid=57351
+2023-09-13 21:02:18,802 INFO - Marking run <DagRun events_etl_dag @ 2023-09-13 13:00:04.905145+00:00: manual__2023-09-13T13:00:04.905145+00:00, state:running, queued_at: 2023-09-13 13:00:04.920348+00:00. externally triggered: True> successful
+2023-09-13 21:02:18,803 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 13:00:04.905145+00:00, run_id=manual__2023-09-13T13:00:04.905145+00:00, run_start_date=2023-09-13 13:00:23.468781+00:00, run_end_date=2023-09-13 13:02:18.803781+00:00, run_duration=115.335, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 13:00:04.905145+00:00, data_interval_end=2023-09-13 13:00:04.905145+00:00, dag_hash=481891f2bcb2efa57aae654ff8aa6576
+2023-09-13 21:02:18,808 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-13 21:06:24,333 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:11:26,321 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:14:26,443 INFO - Starting the scheduler
+2023-09-13 21:14:26,444 INFO - Processing each file at most -1 times
+2023-09-13 21:14:26,449 INFO - Loaded executor: SequentialExecutor
+2023-09-13 21:14:26,454 INFO - Launched DagFileProcessorManager with pid: 60550
+2023-09-13 21:14:26,457 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:14:26,480 INFO - Marked 1 SchedulerJob instances as failed
+2023-09-13 21:14:42,679 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T13:08:34.709959+00:00 [scheduled]>
+2023-09-13 21:14:42,682 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 21:14:42,684 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-13T13:08:34.709959+00:00 [scheduled]>
+2023-09-13 21:14:42,690 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-09-13T13:08:34.709959+00:00', try_number=1, map_index=-1) to executor with priority 5 and queue default
+2023-09-13 21:14:42,692 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T13:08:34.709959+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:14:42,696 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-13T13:08:34.709959+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:15:05,576 INFO - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-09-13T13:08:34.709959+00:00 exited with status success for try_number 1
+2023-09-13 21:15:05,594 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-09-13T13:08:34.709959+00:00, map_index=-1, run_start_date=2023-09-13 13:14:58.089738+00:00, run_end_date=2023-09-13 13:15:05.087434+00:00, run_duration=6.997696, state=success, executor_state=success, try_number=1, max_tries=0, job_id=16, pool=default_pool, queue=default, priority_weight=5, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 13:14:42.686059+00:00, queued_by_job_id=15, pid=60753
+2023-09-13 21:15:08,467 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-13T13:08:34.709959+00:00 [scheduled]>
+2023-09-13 21:15:08,468 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 21:15:08,468 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-13T13:08:34.709959+00:00 [scheduled]>
+2023-09-13 21:15:08,471 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-09-13T13:08:34.709959+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2023-09-13 21:15:08,472 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-13T13:08:34.709959+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:15:08,474 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-13T13:08:34.709959+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:15:33,412 INFO - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-09-13T13:08:34.709959+00:00 exited with status success for try_number 1
+2023-09-13 21:15:33,426 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-09-13T13:08:34.709959+00:00, map_index=-1, run_start_date=2023-09-13 13:15:20.341481+00:00, run_end_date=2023-09-13 13:15:32.849898+00:00, run_duration=12.508417, state=success, executor_state=success, try_number=1, max_tries=0, job_id=17, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 13:15:08.470024+00:00, queued_by_job_id=15, pid=61170
+2023-09-13 21:15:35,489 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-13T13:08:34.709959+00:00 [scheduled]>
+2023-09-13 21:15:35,490 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 21:15:35,491 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-13T13:08:34.709959+00:00 [scheduled]>
+2023-09-13 21:15:35,494 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-09-13T13:08:34.709959+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2023-09-13 21:15:35,494 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-13T13:08:34.709959+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:15:35,497 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-13T13:08:34.709959+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:16:02,638 INFO - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-09-13T13:08:34.709959+00:00 exited with status success for try_number 1
+2023-09-13 21:16:02,654 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-09-13T13:08:34.709959+00:00, map_index=-1, run_start_date=2023-09-13 13:15:49.497460+00:00, run_end_date=2023-09-13 13:16:02.044068+00:00, run_duration=12.546608, state=success, executor_state=success, try_number=1, max_tries=0, job_id=18, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 13:15:35.492669+00:00, queued_by_job_id=15, pid=61755
+2023-09-13 21:16:05,293 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-13T13:08:34.709959+00:00 [scheduled]>
+2023-09-13 21:16:05,294 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 21:16:05,294 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-13T13:08:34.709959+00:00 [scheduled]>
+2023-09-13 21:16:05,297 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_overwrite', run_id='manual__2023-09-13T13:08:34.709959+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2023-09-13 21:16:05,298 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-13T13:08:34.709959+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:16:05,301 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-13T13:08:34.709959+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 21:16:30,371 INFO - Executor reports execution of events_etl_dag.task_ods_overwrite run_id=manual__2023-09-13T13:08:34.709959+00:00 exited with status success for try_number 1
+2023-09-13 21:16:30,381 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_overwrite, run_id=manual__2023-09-13T13:08:34.709959+00:00, map_index=-1, run_start_date=2023-09-13 13:16:19.905495+00:00, run_end_date=2023-09-13 13:16:29.819620+00:00, run_duration=9.914125, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=19, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 13:16:05.296163+00:00, queued_by_job_id=15, pid=61819
+2023-09-13 21:16:32,852 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 13:08:34.709959+00:00: manual__2023-09-13T13:08:34.709959+00:00, state:running, queued_at: 2023-09-13 13:08:34.746756+00:00. externally triggered: True> failed
+2023-09-13 21:16:32,865 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 13:08:34.709959+00:00, run_id=manual__2023-09-13T13:08:34.709959+00:00, run_start_date=2023-09-13 13:08:49.289993+00:00, run_end_date=2023-09-13 13:16:32.858268+00:00, run_duration=463.568275, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 13:08:34.709959+00:00, data_interval_end=2023-09-13 13:08:34.709959+00:00, dag_hash=72b5848b133ea6f2bd4d6316f283a92b
+2023-09-13 21:16:32,879 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-13 21:19:27,903 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:24:28,852 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:29:28,918 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:34:29,673 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:39:41,585 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:44:43,819 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:49:45,690 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:54:45,961 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 21:59:47,177 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:04:48,405 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:09:49,608 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:14:50,729 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:19:50,757 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:24:51,798 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:29:54,046 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:34:54,363 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:39:56,232 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:45:11,326 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:50:12,387 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 22:55:13,243 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:04:58,960 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:13:53,509 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:18:59,704 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:24:00,303 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:29:01,995 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:34:02,113 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:39:04,074 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:44:04,570 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:44:51,305 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T15:44:48.629495+00:00 [scheduled]>
+2023-09-13 23:44:51,306 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 23:44:51,307 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T15:44:48.629495+00:00 [scheduled]>
+2023-09-13 23:44:51,313 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-13T15:44:48.629495+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-09-13 23:44:51,314 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T15:44:48.629495+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:44:51,316 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T15:44:48.629495+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:45:08,944 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-13T15:44:48.629495+00:00 exited with status success for try_number 1
+2023-09-13 23:45:08,955 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-13T15:44:48.629495+00:00, map_index=-1, run_start_date=2023-09-13 15:45:08.427131+00:00, run_end_date=2023-09-13 15:45:08.580380+00:00, run_duration=0.153249, state=success, executor_state=success, try_number=1, max_tries=0, job_id=20, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-09-13 15:44:51.308572+00:00, queued_by_job_id=15, pid=85904
+2023-09-13 23:45:11,688 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T15:44:48.629495+00:00 [scheduled]>
+2023-09-13 23:45:11,689 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 23:45:11,690 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T15:44:48.629495+00:00 [scheduled]>
+2023-09-13 23:45:11,693 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-13T15:44:48.629495+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-13 23:45:11,694 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T15:44:48.629495+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:45:11,697 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T15:44:48.629495+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:45:31,305 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-13T15:44:48.629495+00:00 exited with status success for try_number 1
+2023-09-13 23:45:31,315 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-13T15:44:48.629495+00:00, map_index=-1, run_start_date=2023-09-13 15:45:30.714304+00:00, run_end_date=2023-09-13 15:45:30.854913+00:00, run_duration=0.140609, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=21, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 15:45:11.691877+00:00, queued_by_job_id=15, pid=85915
+2023-09-13 23:45:45,940 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 15:44:48.629495+00:00: manual__2023-09-13T15:44:48.629495+00:00, state:running, queued_at: 2023-09-13 15:44:48.660429+00:00. externally triggered: True> failed
+2023-09-13 23:45:45,943 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 15:44:48.629495+00:00, run_id=manual__2023-09-13T15:44:48.629495+00:00, run_start_date=2023-09-13 15:44:51.255127+00:00, run_end_date=2023-09-13 15:45:45.943500+00:00, run_duration=54.688373, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 15:44:48.629495+00:00, data_interval_end=2023-09-13 15:44:48.629495+00:00, dag_hash=de952e2a907e41c5b4c4aefda7f5252b
+2023-09-13 23:45:45,955 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-13 23:49:04,846 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:54:18,425 INFO - Resetting orphaned tasks for active dag runs
+2023-09-13 23:54:25,208 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T15:54:18.518875+00:00 [scheduled]>
+2023-09-13 23:54:25,209 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 23:54:25,209 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T15:54:18.518875+00:00 [scheduled]>
+2023-09-13 23:54:25,213 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-13T15:54:18.518875+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-13 23:54:25,213 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T15:54:18.518875+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:54:25,216 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T15:54:18.518875+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:54:43,223 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-13T15:54:18.518875+00:00 exited with status success for try_number 1
+2023-09-13 23:54:43,233 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-13T15:54:18.518875+00:00, map_index=-1, run_start_date=2023-09-13 15:54:42.592307+00:00, run_end_date=2023-09-13 15:54:42.792020+00:00, run_duration=0.199713, state=success, executor_state=success, try_number=1, max_tries=0, job_id=22, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-13 15:54:25.211132+00:00, queued_by_job_id=15, pid=87206
+2023-09-13 23:54:45,364 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T15:54:18.518875+00:00 [scheduled]>
+2023-09-13 23:54:45,390 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 23:54:45,391 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T15:54:18.518875+00:00 [scheduled]>
+2023-09-13 23:54:45,395 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-13T15:54:18.518875+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-13 23:54:45,395 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T15:54:18.518875+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:54:45,398 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T15:54:18.518875+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:55:02,473 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-13T15:54:18.518875+00:00 exited with status success for try_number 1
+2023-09-13 23:55:02,483 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-13T15:54:18.518875+00:00, map_index=-1, run_start_date=2023-09-13 15:55:01.883107+00:00, run_end_date=2023-09-13 15:55:02.016331+00:00, run_duration=0.133224, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=23, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 15:54:45.393343+00:00, queued_by_job_id=15, pid=87251
+2023-09-13 23:55:17,048 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 15:54:18.518875+00:00: manual__2023-09-13T15:54:18.518875+00:00, state:running, queued_at: 2023-09-13 15:54:18.557973+00:00. externally triggered: True> failed
+2023-09-13 23:55:17,050 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 15:54:18.518875+00:00, run_id=manual__2023-09-13T15:54:18.518875+00:00, run_start_date=2023-09-13 15:54:22.003305+00:00, run_end_date=2023-09-13 15:55:17.050634+00:00, run_duration=55.047329, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 15:54:18.518875+00:00, data_interval_end=2023-09-13 15:54:18.518875+00:00, dag_hash=2d31733a2105153f5bd22e7265b7d1bf
+2023-09-13 23:55:17,055 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-13 23:57:47,286 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T15:57:40.991274+00:00 [scheduled]>
+2023-09-13 23:57:47,289 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 23:57:47,290 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T15:57:40.991274+00:00 [scheduled]>
+2023-09-13 23:57:47,294 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-13T15:57:40.991274+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-13 23:57:47,295 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T15:57:40.991274+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:57:47,298 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T15:57:40.991274+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:58:03,822 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-13T15:57:40.991274+00:00 exited with status success for try_number 1
+2023-09-13 23:58:03,835 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-13T15:57:40.991274+00:00, map_index=-1, run_start_date=2023-09-13 15:58:03.070663+00:00, run_end_date=2023-09-13 15:58:03.328254+00:00, run_duration=0.257591, state=success, executor_state=success, try_number=1, max_tries=0, job_id=24, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-13 15:57:47.292016+00:00, queued_by_job_id=15, pid=87694
+2023-09-13 23:58:05,941 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T15:57:40.991274+00:00 [scheduled]>
+2023-09-13 23:58:05,942 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-13 23:58:05,943 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T15:57:40.991274+00:00 [scheduled]>
+2023-09-13 23:58:05,946 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-13T15:57:40.991274+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-13 23:58:05,947 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T15:57:40.991274+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:58:05,949 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T15:57:40.991274+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-13 23:58:23,494 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-13T15:57:40.991274+00:00 exited with status success for try_number 1
+2023-09-13 23:58:23,503 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-13T15:57:40.991274+00:00, map_index=-1, run_start_date=2023-09-13 15:58:22.337803+00:00, run_end_date=2023-09-13 15:58:23.044666+00:00, run_duration=0.706863, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=25, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 15:58:05.945088+00:00, queued_by_job_id=15, pid=87733
+2023-09-13 23:58:37,805 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 15:57:40.991274+00:00: manual__2023-09-13T15:57:40.991274+00:00, state:running, queued_at: 2023-09-13 15:57:41.017966+00:00. externally triggered: True> failed
+2023-09-13 23:58:37,807 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 15:57:40.991274+00:00, run_id=manual__2023-09-13T15:57:40.991274+00:00, run_start_date=2023-09-13 15:57:43.962515+00:00, run_end_date=2023-09-13 15:58:37.807246+00:00, run_duration=53.844731, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 15:57:40.991274+00:00, data_interval_end=2023-09-13 15:57:40.991274+00:00, dag_hash=2d31733a2105153f5bd22e7265b7d1bf
+2023-09-13 23:58:37,812 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-13 23:59:19,497 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:04:32,105 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:09:33,241 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:12:57,204 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T16:12:52.882878+00:00 [scheduled]>
+2023-09-14 00:12:57,207 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:12:57,208 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T16:12:52.882878+00:00 [scheduled]>
+2023-09-14 00:12:57,212 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-13T16:12:52.882878+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 00:12:57,212 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T16:12:52.882878+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:12:57,215 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T16:12:52.882878+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:13:20,341 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-13T16:12:52.882878+00:00 exited with status success for try_number 1
+2023-09-14 00:13:20,352 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-13T16:12:52.882878+00:00, map_index=-1, run_start_date=2023-09-13 16:13:19.728850+00:00, run_end_date=2023-09-13 16:13:19.897566+00:00, run_duration=0.168716, state=success, executor_state=success, try_number=1, max_tries=0, job_id=26, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-13 16:12:57.209450+00:00, queued_by_job_id=15, pid=89872
+2023-09-14 00:13:23,530 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T16:12:52.882878+00:00 [scheduled]>
+2023-09-14 00:13:23,531 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:13:23,532 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T16:12:52.882878+00:00 [scheduled]>
+2023-09-14 00:13:23,534 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-13T16:12:52.882878+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 00:13:23,535 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T16:12:52.882878+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:13:23,538 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T16:12:52.882878+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:13:41,418 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-13T16:12:52.882878+00:00 exited with status success for try_number 1
+2023-09-14 00:13:41,427 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-13T16:12:52.882878+00:00, map_index=-1, run_start_date=2023-09-13 16:13:40.753738+00:00, run_end_date=2023-09-13 16:13:40.943887+00:00, run_duration=0.190149, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=27, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 16:13:23.533262+00:00, queued_by_job_id=15, pid=89897
+2023-09-14 00:13:56,481 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 16:12:52.882878+00:00: manual__2023-09-13T16:12:52.882878+00:00, state:running, queued_at: 2023-09-13 16:12:52.960822+00:00. externally triggered: True> failed
+2023-09-14 00:13:56,483 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 16:12:52.882878+00:00, run_id=manual__2023-09-13T16:12:52.882878+00:00, run_start_date=2023-09-13 16:12:54.490622+00:00, run_end_date=2023-09-13 16:13:56.483755+00:00, run_duration=61.993133, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 16:12:52.882878+00:00, data_interval_end=2023-09-13 16:12:52.882878+00:00, dag_hash=5cdbc2b5a72fd71d23a7819c16fa18f8
+2023-09-14 00:13:56,488 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-14 00:14:35,845 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:16:16,876 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T16:16:12.922126+00:00 [scheduled]>
+2023-09-14 00:16:16,878 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:16:16,879 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T16:16:12.922126+00:00 [scheduled]>
+2023-09-14 00:16:16,883 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-13T16:16:12.922126+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 00:16:16,884 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T16:16:12.922126+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:16:16,886 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T16:16:12.922126+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:16:33,172 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-13T16:16:12.922126+00:00 exited with status success for try_number 1
+2023-09-14 00:16:33,183 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-13T16:16:12.922126+00:00, map_index=-1, run_start_date=2023-09-13 16:16:32.565289+00:00, run_end_date=2023-09-13 16:16:32.757601+00:00, run_duration=0.192312, state=success, executor_state=success, try_number=1, max_tries=0, job_id=28, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-13 16:16:16.880467+00:00, queued_by_job_id=15, pid=90103
+2023-09-14 00:16:35,200 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T16:16:12.922126+00:00 [scheduled]>
+2023-09-14 00:16:35,201 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:16:35,202 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T16:16:12.922126+00:00 [scheduled]>
+2023-09-14 00:16:35,204 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-13T16:16:12.922126+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 00:16:35,205 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T16:16:12.922126+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:16:35,208 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T16:16:12.922126+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:16:51,551 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-13T16:16:12.922126+00:00 exited with status success for try_number 1
+2023-09-14 00:16:51,560 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-13T16:16:12.922126+00:00, map_index=-1, run_start_date=2023-09-13 16:16:50.230609+00:00, run_end_date=2023-09-13 16:16:51.104099+00:00, run_duration=0.87349, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=29, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 16:16:35.203443+00:00, queued_by_job_id=15, pid=90114
+2023-09-14 00:17:19,050 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 16:16:12.922126+00:00: manual__2023-09-13T16:16:12.922126+00:00, state:running, queued_at: 2023-09-13 16:16:13.040836+00:00. externally triggered: True> failed
+2023-09-14 00:17:19,052 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 16:16:12.922126+00:00, run_id=manual__2023-09-13T16:16:12.922126+00:00, run_start_date=2023-09-13 16:16:13.528851+00:00, run_end_date=2023-09-13 16:17:19.052593+00:00, run_duration=65.523742, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 16:16:12.922126+00:00, data_interval_end=2023-09-13 16:16:12.922126+00:00, dag_hash=975e3d84468aab311920898a75fb7932
+2023-09-14 00:17:19,056 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-14 00:19:38,883 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:20:29,514 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T16:20:24.564786+00:00 [scheduled]>
+2023-09-14 00:20:29,516 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:20:29,517 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-13T16:20:24.564786+00:00 [scheduled]>
+2023-09-14 00:20:29,521 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-13T16:20:24.564786+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 00:20:29,521 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T16:20:24.564786+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:20:29,524 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-13T16:20:24.564786+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:20:45,485 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-13T16:20:24.564786+00:00 exited with status success for try_number 1
+2023-09-14 00:20:45,495 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-13T16:20:24.564786+00:00, map_index=-1, run_start_date=2023-09-13 16:20:44.879850+00:00, run_end_date=2023-09-13 16:20:45.077033+00:00, run_duration=0.197183, state=success, executor_state=success, try_number=1, max_tries=0, job_id=30, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-13 16:20:29.518269+00:00, queued_by_job_id=15, pid=90469
+2023-09-14 00:20:47,654 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T16:20:24.564786+00:00 [scheduled]>
+2023-09-14 00:20:47,655 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:20:47,656 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-13T16:20:24.564786+00:00 [scheduled]>
+2023-09-14 00:20:47,659 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-13T16:20:24.564786+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 00:20:47,659 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T16:20:24.564786+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:20:47,661 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-13T16:20:24.564786+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:21:03,865 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-13T16:20:24.564786+00:00 exited with status success for try_number 1
+2023-09-14 00:21:03,880 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-13T16:20:24.564786+00:00, map_index=-1, run_start_date=2023-09-13 16:21:02.710916+00:00, run_end_date=2023-09-13 16:21:03.395987+00:00, run_duration=0.685071, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=31, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 16:20:47.657584+00:00, queued_by_job_id=15, pid=90486
+2023-09-14 00:21:18,345 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 16:20:24.564786+00:00: manual__2023-09-13T16:20:24.564786+00:00, state:running, queued_at: 2023-09-13 16:20:24.594209+00:00. externally triggered: True> failed
+2023-09-14 00:21:18,346 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 16:20:24.564786+00:00, run_id=manual__2023-09-13T16:20:24.564786+00:00, run_start_date=2023-09-13 16:20:27.333451+00:00, run_end_date=2023-09-13 16:21:18.346326+00:00, run_duration=51.012875, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 16:20:24.564786+00:00, data_interval_end=2023-09-13 16:20:24.564786+00:00, dag_hash=975e3d84468aab311920898a75fb7932
+2023-09-14 00:21:18,349 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-14 00:23:30,868 INFO - Marking run <DagRun events_etl_dag @ 2023-09-01 16:23:14+00:00: manual__2023-09-01T16:23:14+00:00, state:running, queued_at: 2023-09-13 16:23:28.335599+00:00. externally triggered: True> successful
+2023-09-14 00:23:30,870 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-01 16:23:14+00:00, run_id=manual__2023-09-01T16:23:14+00:00, run_start_date=2023-09-13 16:23:30.851216+00:00, run_end_date=2023-09-13 16:23:30.870376+00:00, run_duration=0.01916, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-01 16:23:14+00:00, data_interval_end=2023-09-01 16:23:14+00:00, dag_hash=975e3d84468aab311920898a75fb7932
+2023-09-14 00:23:30,874 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-14 00:24:10,161 INFO - Marking run <DagRun events_etl_dag @ 2023-09-01 16:23:58+00:00: manual__2023-09-01T16:23:58+00:00, state:running, queued_at: 2023-09-13 16:24:07.393895+00:00. externally triggered: True> successful
+2023-09-14 00:24:10,162 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-01 16:23:58+00:00, run_id=manual__2023-09-01T16:23:58+00:00, run_start_date=2023-09-13 16:24:10.151994+00:00, run_end_date=2023-09-13 16:24:10.162197+00:00, run_duration=0.010203, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-01 16:23:58+00:00, data_interval_end=2023-09-01 16:23:58+00:00, dag_hash=975e3d84468aab311920898a75fb7932
+2023-09-14 00:24:10,165 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-14 00:24:39,468 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:29:41,315 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:31:55,871 INFO - Marking run <DagRun events_etl_dag @ 2023-09-02 16:31:41+00:00: manual__2023-09-02T16:31:41+00:00, state:running, queued_at: 2023-09-13 16:31:54.516090+00:00. externally triggered: True> successful
+2023-09-14 00:31:55,874 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-02 16:31:41+00:00, run_id=manual__2023-09-02T16:31:41+00:00, run_start_date=2023-09-13 16:31:55.838286+00:00, run_end_date=2023-09-13 16:31:55.874787+00:00, run_duration=0.036501, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-02 16:31:41+00:00, data_interval_end=2023-09-02 16:31:41+00:00, dag_hash=975e3d84468aab311920898a75fb7932
+2023-09-14 00:31:55,881 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-14 00:34:41,783 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:37:02,415 INFO - Marking run <DagRun events_etl_dag @ 2023-08-01 00:00:00+00:00: manual__2023-08-01T00:00:00+00:00, state:running, queued_at: 2023-09-13 16:37:01.460408+00:00. externally triggered: True> successful
+2023-09-14 00:37:02,418 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-08-01 00:00:00+00:00, run_id=manual__2023-08-01T00:00:00+00:00, run_start_date=2023-09-13 16:37:02.399151+00:00, run_end_date=2023-09-13 16:37:02.418099+00:00, run_duration=0.018948, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-08-01 00:00:00+00:00, data_interval_end=2023-08-01 00:00:00+00:00, dag_hash=975e3d84468aab311920898a75fb7932
+2023-09-14 00:37:02,452 INFO - Setting next_dagrun for events_etl_dag to None, run_after=None
+2023-09-14 00:39:43,833 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:40:37,361 INFO - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00
+2023-09-14 00:40:40,851 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python scheduled__2023-09-12T00:00:00+00:00 [scheduled]>
+2023-09-14 00:40:40,853 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:40:40,854 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python scheduled__2023-09-12T00:00:00+00:00 [scheduled]>
+2023-09-14 00:40:40,858 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='scheduled__2023-09-12T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 00:40:40,859 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'scheduled__2023-09-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:40:40,861 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'scheduled__2023-09-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:40:55,894 INFO - Executor reports execution of events_etl_dag.task_python run_id=scheduled__2023-09-12T00:00:00+00:00 exited with status success for try_number 1
+2023-09-14 00:40:55,905 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=scheduled__2023-09-12T00:00:00+00:00, map_index=-1, run_start_date=2023-09-13 16:40:55.287587+00:00, run_end_date=2023-09-13 16:40:55.477178+00:00, run_duration=0.189591, state=success, executor_state=success, try_number=1, max_tries=0, job_id=32, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-13 16:40:40.855720+00:00, queued_by_job_id=15, pid=95268
+2023-09-14 00:40:58,182 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date scheduled__2023-09-12T00:00:00+00:00 [scheduled]>
+2023-09-14 00:40:58,183 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:40:58,184 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date scheduled__2023-09-12T00:00:00+00:00 [scheduled]>
+2023-09-14 00:40:58,186 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='scheduled__2023-09-12T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 00:40:58,188 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'scheduled__2023-09-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:40:58,190 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'scheduled__2023-09-12T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:41:15,458 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=scheduled__2023-09-12T00:00:00+00:00 exited with status success for try_number 1
+2023-09-14 00:41:15,485 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=scheduled__2023-09-12T00:00:00+00:00, map_index=-1, run_start_date=2023-09-13 16:41:14.238978+00:00, run_end_date=2023-09-13 16:41:14.959483+00:00, run_duration=0.720505, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=33, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 16:40:58.185599+00:00, queued_by_job_id=15, pid=95304
+2023-09-14 00:41:30,844 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-12 00:00:00+00:00: scheduled__2023-09-12T00:00:00+00:00, state:running, queued_at: 2023-09-13 16:40:37.264454+00:00. externally triggered: False> failed
+2023-09-14 00:41:30,846 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-12 00:00:00+00:00, run_id=scheduled__2023-09-12T00:00:00+00:00, run_start_date=2023-09-13 16:40:37.373257+00:00, run_end_date=2023-09-13 16:41:30.846549+00:00, run_duration=53.473292, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-09-12 00:00:00+00:00, data_interval_end=2023-09-13 00:00:00+00:00, dag_hash=be479f3ff2e164b4bcf7bf8b2ee48656
+2023-09-14 00:41:30,852 INFO - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00
+2023-09-14 00:42:16,108 INFO - Marking run <DagRun events_etl_dag @ 2023-08-10 16:41:51+00:00: manual__2023-08-10T16:41:51+00:00, state:running, queued_at: 2023-09-13 16:42:15.306595+00:00. externally triggered: True> successful
+2023-09-14 00:42:16,110 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-08-10 16:41:51+00:00, run_id=manual__2023-08-10T16:41:51+00:00, run_start_date=2023-09-13 16:42:16.098729+00:00, run_end_date=2023-09-13 16:42:16.110752+00:00, run_duration=0.012023, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-08-09 00:00:00+00:00, data_interval_end=2023-08-10 00:00:00+00:00, dag_hash=be479f3ff2e164b4bcf7bf8b2ee48656
+2023-09-14 00:42:16,116 INFO - Setting next_dagrun for events_etl_dag to 2023-09-12T00:00:00+00:00, run_after=2023-09-13T00:00:00+00:00
+2023-09-14 00:42:19,330 INFO - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00
+2023-09-14 00:44:45,613 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:47:13,334 INFO - Marking run <DagRun events_etl_dag @ 2023-09-10 16:47:03+00:00: manual__2023-09-10T16:47:03+00:00, state:running, queued_at: 2023-09-13 16:47:10.337017+00:00. externally triggered: True> successful
+2023-09-14 00:47:13,336 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-10 16:47:03+00:00, run_id=manual__2023-09-10T16:47:03+00:00, run_start_date=2023-09-13 16:47:13.320078+00:00, run_end_date=2023-09-13 16:47:13.336606+00:00, run_duration=0.016528, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-09 00:00:00+00:00, data_interval_end=2023-09-10 00:00:00+00:00, dag_hash=be479f3ff2e164b4bcf7bf8b2ee48656
+2023-09-14 00:47:13,343 INFO - Setting next_dagrun for events_etl_dag to 2023-09-12T00:00:00+00:00, run_after=2023-09-13T00:00:00+00:00
+2023-09-14 00:47:16,128 INFO - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00
+2023-09-14 00:49:46,572 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:50:49,964 INFO - Marking run <DagRun events_etl_dag @ 2023-09-05 16:50:39+00:00: manual__2023-09-05T16:50:39+00:00, state:running, queued_at: 2023-09-13 16:50:47.745487+00:00. externally triggered: True> successful
+2023-09-14 00:50:49,966 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-05 16:50:39+00:00, run_id=manual__2023-09-05T16:50:39+00:00, run_start_date=2023-09-13 16:50:49.942371+00:00, run_end_date=2023-09-13 16:50:49.966441+00:00, run_duration=0.02407, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-04 00:00:00+00:00, data_interval_end=2023-09-05 00:00:00+00:00, dag_hash=be479f3ff2e164b4bcf7bf8b2ee48656
+2023-09-14 00:50:49,973 INFO - Setting next_dagrun for events_etl_dag to 2023-09-12T00:00:00+00:00, run_after=2023-09-13T00:00:00+00:00
+2023-09-14 00:50:53,178 INFO - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00
+2023-09-14 00:53:00,720 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-04T16:52:48+00:00 [scheduled]>
+2023-09-14 00:53:00,722 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:53:00,722 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-04T16:52:48+00:00 [scheduled]>
+2023-09-14 00:53:00,726 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-04T16:52:48+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 00:53:00,727 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-04T16:52:48+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:53:00,729 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-04T16:52:48+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:53:15,478 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-04T16:52:48+00:00 exited with status success for try_number 1
+2023-09-14 00:53:15,489 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-04T16:52:48+00:00, map_index=-1, run_start_date=2023-09-13 16:53:14.680745+00:00, run_end_date=2023-09-13 16:53:14.986466+00:00, run_duration=0.305721, state=success, executor_state=success, try_number=1, max_tries=0, job_id=34, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-13 16:53:00.723528+00:00, queued_by_job_id=15, pid=97225
+2023-09-14 00:53:17,796 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-04T16:52:48+00:00 [scheduled]>
+2023-09-14 00:53:17,797 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 00:53:17,798 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-04T16:52:48+00:00 [scheduled]>
+2023-09-14 00:53:17,803 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-04T16:52:48+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 00:53:17,806 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-04T16:52:48+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:53:17,808 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-04T16:52:48+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 00:53:35,303 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-04T16:52:48+00:00 exited with status success for try_number 1
+2023-09-14 00:53:35,310 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-04T16:52:48+00:00, map_index=-1, run_start_date=2023-09-13 16:53:34.232769+00:00, run_end_date=2023-09-13 16:53:34.866741+00:00, run_duration=0.633972, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=35, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 16:53:17.802121+00:00, queued_by_job_id=15, pid=97234
+2023-09-14 00:53:48,685 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-04 16:52:48+00:00: manual__2023-09-04T16:52:48+00:00, state:running, queued_at: 2023-09-13 16:52:56.007134+00:00. externally triggered: True> failed
+2023-09-14 00:53:48,687 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-04 16:52:48+00:00, run_id=manual__2023-09-04T16:52:48+00:00, run_start_date=2023-09-13 16:52:57.303387+00:00, run_end_date=2023-09-13 16:53:48.687301+00:00, run_duration=51.383914, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-09-03 00:00:00+00:00, data_interval_end=2023-09-04 00:00:00+00:00, dag_hash=228b3c1b5a2fcc983aaf551f7dc18840
+2023-09-14 00:53:48,695 INFO - Setting next_dagrun for events_etl_dag to 2023-09-12T00:00:00+00:00, run_after=2023-09-13T00:00:00+00:00
+2023-09-14 00:53:51,888 INFO - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00
+2023-09-14 00:54:48,622 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 00:59:54,897 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 01:04:56,266 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 01:09:57,891 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 01:12:20,209 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:12:20,211 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 01:12:20,211 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:12:20,217 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-02T17:11:57+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 01:12:20,218 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:12:20,220 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:12:34,690 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-02T17:11:57+00:00 exited with status success for try_number 1
+2023-09-14 01:12:34,705 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-02T17:11:57+00:00, map_index=-1, run_start_date=2023-09-13 17:12:33.928042+00:00, run_end_date=2023-09-13 17:12:34.141020+00:00, run_duration=0.212978, state=success, executor_state=success, try_number=1, max_tries=0, job_id=36, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-13 17:12:20.213232+00:00, queued_by_job_id=15, pid=99918
+2023-09-14 01:12:37,466 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:12:37,467 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 01:12:37,468 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:12:37,470 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-02T17:11:57+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 01:12:37,471 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:12:37,473 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:13:08,571 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-02T17:11:57+00:00 exited with status success for try_number 1
+2023-09-14 01:13:08,581 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-02T17:11:57+00:00, map_index=-1, run_start_date=2023-09-13 17:12:51.265911+00:00, run_end_date=2023-09-13 17:13:08.145714+00:00, run_duration=16.879803, state=success, executor_state=success, try_number=1, max_tries=0, job_id=37, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 17:12:37.469326+00:00, queued_by_job_id=15, pid=104
+2023-09-14 01:13:10,686 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:13:10,687 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 01:13:10,688 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:13:10,691 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-09-02T17:11:57+00:00', try_number=1, map_index=-1) to executor with priority 5 and queue default
+2023-09-14 01:13:10,692 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:13:10,695 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:13:32,145 INFO - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-09-02T17:11:57+00:00 exited with status success for try_number 1
+2023-09-14 01:13:32,152 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-09-02T17:11:57+00:00, map_index=-1, run_start_date=2023-09-13 17:13:24.399100+00:00, run_end_date=2023-09-13 17:13:31.803196+00:00, run_duration=7.404096, state=success, executor_state=success, try_number=1, max_tries=0, job_id=38, pool=default_pool, queue=default, priority_weight=5, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 17:13:10.690267+00:00, queued_by_job_id=15, pid=203
+2023-09-14 01:13:34,921 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:13:34,922 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 01:13:34,924 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:13:34,926 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-09-02T17:11:57+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2023-09-14 01:13:34,927 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:13:34,929 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:14:00,736 INFO - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-09-02T17:11:57+00:00 exited with status success for try_number 1
+2023-09-14 01:14:00,746 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-09-02T17:11:57+00:00, map_index=-1, run_start_date=2023-09-13 17:13:48.108140+00:00, run_end_date=2023-09-13 17:14:00.282355+00:00, run_duration=12.174215, state=success, executor_state=success, try_number=1, max_tries=0, job_id=39, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 17:13:34.925028+00:00, queued_by_job_id=15, pid=249
+2023-09-14 01:14:03,314 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:14:03,315 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 01:14:03,316 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:14:03,319 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-09-02T17:11:57+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2023-09-14 01:14:03,320 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:14:03,322 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:14:29,394 INFO - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-09-02T17:11:57+00:00 exited with status success for try_number 1
+2023-09-14 01:14:29,403 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-09-02T17:11:57+00:00, map_index=-1, run_start_date=2023-09-13 17:14:17.046779+00:00, run_end_date=2023-09-13 17:14:29.020634+00:00, run_duration=11.973855, state=success, executor_state=success, try_number=1, max_tries=0, job_id=40, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 17:14:03.317642+00:00, queued_by_job_id=15, pid=311
+2023-09-14 01:14:31,510 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:14:31,511 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 01:14:31,511 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-02T17:11:57+00:00 [scheduled]>
+2023-09-14 01:14:31,513 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_overwrite', run_id='manual__2023-09-02T17:11:57+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2023-09-14 01:14:31,514 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:14:31,516 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-02T17:11:57+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 01:14:59,285 INFO - Executor reports execution of events_etl_dag.task_ods_overwrite run_id=manual__2023-09-02T17:11:57+00:00 exited with status success for try_number 1
+2023-09-14 01:14:59,296 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_overwrite, run_id=manual__2023-09-02T17:11:57+00:00, map_index=-1, run_start_date=2023-09-13 17:14:45.070849+00:00, run_end_date=2023-09-13 17:14:58.859128+00:00, run_duration=13.788279, state=success, executor_state=success, try_number=1, max_tries=0, job_id=41, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-13 17:14:31.512622+00:00, queued_by_job_id=15, pid=342
+2023-09-14 01:14:59,325 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 01:15:01,719 INFO - Marking run <DagRun events_etl_dag @ 2023-09-02 17:11:57+00:00: manual__2023-09-02T17:11:57+00:00, state:running, queued_at: 2023-09-13 17:12:16.013988+00:00. externally triggered: True> successful
+2023-09-14 01:15:01,722 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-02 17:11:57+00:00, run_id=manual__2023-09-02T17:11:57+00:00, run_start_date=2023-09-13 17:12:16.873849+00:00, run_end_date=2023-09-13 17:15:01.721617+00:00, run_duration=164.847768, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-01 00:00:00+00:00, data_interval_end=2023-09-02 00:00:00+00:00, dag_hash=9be552d071715e3a5d7d74a915009258
+2023-09-14 01:15:01,733 INFO - Setting next_dagrun for events_etl_dag to 2023-09-12T00:00:00+00:00, run_after=2023-09-13T00:00:00+00:00
+2023-09-14 01:15:04,401 INFO - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00
+2023-09-14 01:24:18,835 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 01:24:18,843 INFO - Marked 1 SchedulerJob instances as failed
+2023-09-14 08:57:40,230 INFO - Starting the scheduler
+2023-09-14 08:57:40,232 INFO - Processing each file at most -1 times
+2023-09-14 08:57:40,238 INFO - Loaded executor: SequentialExecutor
+2023-09-14 08:57:40,243 INFO - Launched DagFileProcessorManager with pid: 8430
+2023-09-14 08:57:40,247 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 08:57:40,268 INFO - Marked 1 SchedulerJob instances as failed
+2023-09-14 08:57:57,026 INFO - Setting next_dagrun for events_etl_dag to 2023-09-14T00:00:00+00:00, run_after=2023-09-15T00:00:00+00:00
+2023-09-14 08:58:00,815 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python scheduled__2023-09-13T00:00:00+00:00 [scheduled]>
+2023-09-14 08:58:00,817 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 08:58:00,818 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python scheduled__2023-09-13T00:00:00+00:00 [scheduled]>
+2023-09-14 08:58:00,823 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='scheduled__2023-09-13T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 08:58:00,824 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'scheduled__2023-09-13T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 08:58:00,828 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'scheduled__2023-09-13T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 08:58:14,993 INFO - Executor reports execution of events_etl_dag.task_python run_id=scheduled__2023-09-13T00:00:00+00:00 exited with status success for try_number 1
+2023-09-14 08:58:15,017 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=scheduled__2023-09-13T00:00:00+00:00, map_index=-1, run_start_date=2023-09-14 00:58:14.325622+00:00, run_end_date=2023-09-14 00:58:14.509404+00:00, run_duration=0.183782, state=success, executor_state=success, try_number=1, max_tries=0, job_id=43, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-14 00:58:00.819973+00:00, queued_by_job_id=42, pid=8607
+2023-09-14 08:58:18,307 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date scheduled__2023-09-13T00:00:00+00:00 [scheduled]>
+2023-09-14 08:58:18,308 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 08:58:18,309 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date scheduled__2023-09-13T00:00:00+00:00 [scheduled]>
+2023-09-14 08:58:18,311 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='scheduled__2023-09-13T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 08:58:18,312 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'scheduled__2023-09-13T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 08:58:18,314 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'scheduled__2023-09-13T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 08:58:33,457 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=scheduled__2023-09-13T00:00:00+00:00 exited with status success for try_number 1
+2023-09-14 08:58:33,467 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=scheduled__2023-09-13T00:00:00+00:00, map_index=-1, run_start_date=2023-09-14 00:58:31.939067+00:00, run_end_date=2023-09-14 00:58:33.012441+00:00, run_duration=1.073374, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=44, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 00:58:18.310126+00:00, queued_by_job_id=42, pid=8695
+2023-09-14 08:58:48,672 ERROR - Marking run <DagRun events_etl_dag @ 2023-09-13 00:00:00+00:00: scheduled__2023-09-13T00:00:00+00:00, state:running, queued_at: 2023-09-14 00:57:57.001496+00:00. externally triggered: False> failed
+2023-09-14 08:58:48,674 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 00:00:00+00:00, run_id=scheduled__2023-09-13T00:00:00+00:00, run_start_date=2023-09-14 00:57:57.049609+00:00, run_end_date=2023-09-14 00:58:48.674046+00:00, run_duration=51.624437, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-09-13 00:00:00+00:00, data_interval_end=2023-09-14 00:00:00+00:00, dag_hash=d9d919069b7556fbd0653c34e8a69b52
+2023-09-14 08:58:48,680 INFO - Setting next_dagrun for events_etl_dag to 2023-09-14T00:00:00+00:00, run_after=2023-09-15T00:00:00+00:00
+2023-09-14 08:59:19,231 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 08:59:19,233 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 08:59:19,234 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 08:59:19,238 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 08:59:19,238 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 08:59:19,241 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 08:59:33,890 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1
+2023-09-14 08:59:33,898 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 00:59:33.269841+00:00, run_end_date=2023-09-14 00:59:33.453747+00:00, run_duration=0.183906, state=success, executor_state=success, try_number=1, max_tries=0, job_id=45, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-14 00:59:19.236301+00:00, queued_by_job_id=42, pid=9802
+2023-09-14 08:59:36,197 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 08:59:36,198 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 08:59:36,199 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 08:59:36,202 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 08:59:36,203 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 08:59:36,205 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:00:06,807 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1
+2023-09-14 09:00:06,814 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 00:59:51.184190+00:00, run_end_date=2023-09-14 01:00:06.396874+00:00, run_duration=15.212684, state=success, executor_state=success, try_number=1, max_tries=0, job_id=46, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 00:59:36.200312+00:00, queued_by_job_id=42, pid=9841
+2023-09-14 09:00:09,087 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 09:00:09,088 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 09:00:09,089 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 09:00:09,092 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 5 and queue default
+2023-09-14 09:00:09,093 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:00:09,095 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:00:30,305 INFO - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1
+2023-09-14 09:00:30,313 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 01:00:22.842396+00:00, run_end_date=2023-09-14 01:00:29.879330+00:00, run_duration=7.036934, state=success, executor_state=success, try_number=1, max_tries=0, job_id=47, pool=default_pool, queue=default, priority_weight=5, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:00:09.091091+00:00, queued_by_job_id=42, pid=9975
+2023-09-14 09:00:33,153 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 09:00:33,170 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 09:00:33,172 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 09:00:33,195 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2023-09-14 09:00:33,213 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:00:33,217 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:00:58,785 INFO - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1
+2023-09-14 09:00:58,794 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 01:00:47.375970+00:00, run_end_date=2023-09-14 01:00:58.321605+00:00, run_duration=10.945635, state=success, executor_state=success, try_number=1, max_tries=0, job_id=48, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:00:33.174772+00:00, queued_by_job_id=42, pid=10143
+2023-09-14 09:01:01,685 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 09:01:01,686 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 09:01:01,687 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 09:01:01,691 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2023-09-14 09:01:01,692 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:01:01,694 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:01:24,144 INFO - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1
+2023-09-14 09:01:24,153 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 01:01:15.754298+00:00, run_end_date=2023-09-14 01:01:23.707637+00:00, run_duration=7.953339, state=success, executor_state=success, try_number=1, max_tries=0, job_id=49, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:01:01.689842+00:00, queued_by_job_id=42, pid=10286
+2023-09-14 09:01:27,102 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 09:01:27,103 INFO - DAG events_etl_dag has 0/16 running and queued tasks
+2023-09-14 09:01:27,103 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-08-08T00:58:47+00:00 [scheduled]>
+2023-09-14 09:01:27,106 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_overwrite', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2023-09-14 09:01:27,106 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:01:27,109 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:01:54,152 INFO - Executor reports execution of events_etl_dag.task_ods_overwrite run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1
+2023-09-14 09:01:54,161 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_overwrite, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 01:01:40.619349+00:00, run_end_date=2023-09-14 01:01:53.790971+00:00, run_duration=13.171622, state=success, executor_state=success, try_number=1, max_tries=0, job_id=50, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:01:27.104717+00:00, queued_by_job_id=42, pid=10318
+2023-09-14 09:01:56,104 INFO - Marking run <DagRun events_etl_dag @ 2023-08-08 00:58:47+00:00: manual__2023-08-08T00:58:47+00:00, state:running, queued_at: 2023-09-14 00:59:13.000063+00:00. externally triggered: True> successful
+2023-09-14 09:01:56,105 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-08-08 00:58:47+00:00, run_id=manual__2023-08-08T00:58:47+00:00, run_start_date=2023-09-14 00:59:16.069056+00:00, run_end_date=2023-09-14 01:01:56.104943+00:00, run_duration=160.035887, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-08-07 00:00:00+00:00, data_interval_end=2023-08-08 00:00:00+00:00, dag_hash=d9d919069b7556fbd0653c34e8a69b52
+2023-09-14 09:01:56,109 INFO - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00
+2023-09-14 09:01:59,026 INFO - Setting next_dagrun for events_etl_dag to 2023-09-14T00:00:00+00:00, run_after=2023-09-15T00:00:00+00:00
+2023-09-14 09:02:41,782 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 09:07:41,940 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 09:12:43,094 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 09:17:44,071 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 09:20:11,442 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:20:11,443 INFO - DAG events_etl_dag has 3/16 running and queued tasks
+2023-09-14 09:20:11,443 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:20:11,446 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default
+2023-09-14 09:20:11,447 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:20:11,449 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:20:25,668 INFO - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1
+2023-09-14 09:20:25,676 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:20:24.955804+00:00, run_end_date=2023-09-14 01:20:25.195366+00:00, run_duration=0.239562, state=success, executor_state=success, try_number=1, max_tries=0, job_id=55, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-14 01:20:11.445257+00:00, queued_by_job_id=42, pid=15112
+2023-09-14 09:20:28,547 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:20:28,548 INFO - DAG events_etl_dag has 3/16 running and queued tasks
+2023-09-14 09:20:28,549 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:20:28,552 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default
+2023-09-14 09:20:28,553 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:20:28,556 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:20:58,423 INFO - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1
+2023-09-14 09:20:58,433 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:20:42.393157+00:00, run_end_date=2023-09-14 01:20:57.984373+00:00, run_duration=15.591216, state=success, executor_state=success, try_number=1, max_tries=0, job_id=56, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:20:28.550440+00:00, queued_by_job_id=42, pid=15545
+2023-09-14 09:21:13,098 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:21:13,099 INFO - DAG events_etl_dag has 3/16 running and queued tasks
+2023-09-14 09:21:13,100 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:21:13,105 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 5 and queue default
+2023-09-14 09:21:13,106 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:21:13,110 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:21:35,486 INFO - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1
+2023-09-14 09:21:35,496 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:21:27.626069+00:00, run_end_date=2023-09-14 01:21:35.048196+00:00, run_duration=7.422127, state=success, executor_state=success, try_number=1, max_tries=0, job_id=57, pool=default_pool, queue=default, priority_weight=5, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:21:13.102414+00:00, queued_by_job_id=42, pid=16169
+2023-09-14 09:21:37,502 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:21:37,504 INFO - DAG events_etl_dag has 3/16 running and queued tasks
+2023-09-14 09:21:37,505 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:21:37,509 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2023-09-14 09:21:37,510 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:21:37,513 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:22:05,923 INFO - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1
+2023-09-14 09:22:05,932 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:21:53.359116+00:00, run_end_date=2023-09-14 01:22:05.496430+00:00, run_duration=12.137314, state=success, executor_state=success, try_number=1, max_tries=0, job_id=58, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:21:37.507139+00:00, queued_by_job_id=42, pid=16264
+2023-09-14 09:22:08,633 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:22:08,634 INFO - DAG events_etl_dag has 3/16 running and queued tasks
+2023-09-14 09:22:08,635 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:22:08,637 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2023-09-14 09:22:08,638 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:22:08,640 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:22:29,469 INFO - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1
+2023-09-14 09:22:29,478 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:22:21.895590+00:00, run_end_date=2023-09-14 01:22:29.038003+00:00, run_duration=7.142413, state=success, executor_state=success, try_number=1, max_tries=0, job_id=59, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:22:08.636490+00:00, queued_by_job_id=42, pid=16746
+2023-09-14 09:22:32,194 INFO - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:22:32,196 INFO - DAG events_etl_dag has 3/16 running and queued tasks
+2023-09-14 09:22:32,197 INFO - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-14T01:18:40+00:00 [scheduled]>
+2023-09-14 09:22:32,199 INFO - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_overwrite', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2023-09-14 09:22:32,200 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:22:32,203 INFO - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py']
+2023-09-14 09:23:02,864 INFO - Executor reports execution of events_etl_dag.task_ods_overwrite run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1
+2023-09-14 09:23:02,873 INFO - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_overwrite, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:22:47.733988+00:00, run_end_date=2023-09-14 01:23:02.444970+00:00, run_duration=14.710982, state=success, executor_state=success, try_number=1, max_tries=0, job_id=60, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:22:32.198350+00:00, queued_by_job_id=42, pid=16826
+2023-09-14 09:23:02,907 INFO - Resetting orphaned tasks for active dag runs
+2023-09-14 09:23:02,913 INFO - Marked 1 SchedulerJob instances as failed
+2023-09-14 09:23:05,487 INFO - Marking run <DagRun events_etl_dag @ 2023-09-14 01:18:40+00:00: manual__2023-09-14T01:18:40+00:00, state:running, queued_at: 2023-09-14 01:20:05.504935+00:00. externally triggered: True> successful
+2023-09-14 09:23:05,488 INFO - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-14 01:18:40+00:00, run_id=manual__2023-09-14T01:18:40+00:00, run_start_date=2023-09-14 01:20:08.272631+00:00, run_end_date=2023-09-14 01:23:05.488173+00:00, run_duration=177.215542, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 00:00:00+00:00, data_interval_end=2023-09-14 00:00:00+00:00, dag_hash=d9d919069b7556fbd0653c34e8a69b52
+2023-09-14 09:23:05,493 INFO - Setting next_dagrun for events_etl_dag to 2023-09-14T00:00:00+00:00, run_after=2023-09-15T00:00:00+00:00
+2023-09-14 09:28:04,844 INFO - Resetting orphaned tasks for active dag runs

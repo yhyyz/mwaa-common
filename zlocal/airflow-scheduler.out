@@ -1,0 +1,684 @@
+[[34m2023-09-14 08:57:40,230[0m] {[34mscheduler_job.py:[0m714} INFO[0m - Starting the scheduler[0m
+[[34m2023-09-14 08:57:40,232[0m] {[34mscheduler_job.py:[0m719} INFO[0m - Processing each file at most -1 times[0m
+[[34m2023-09-14 08:57:40,238[0m] {[34mexecutor_loader.py:[0m107} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2023-09-14 08:57:40,243[0m] {[34mmanager.py:[0m163} INFO[0m - Launched DagFileProcessorManager with pid: 8430[0m
+[[34m2023-09-14 08:57:40,247[0m] {[34mscheduler_job.py:[0m1408} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-09-14 08:57:40,268[0m] {[34mscheduler_job.py:[0m1431} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2023-09-14 08:57:41,141[0m] {[34msettings.py:[0m58} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2023-09-14T08:57:41.144+0800] {manager.py:409} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2023-09-14 08:57:57,026[0m] {[34mdag.py:[0m3437} INFO[0m - Setting next_dagrun for events_etl_dag to 2023-09-14T00:00:00+00:00, run_after=2023-09-15T00:00:00+00:00[0m
+[[34m2023-09-14 08:58:00,815[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python scheduled__2023-09-13T00:00:00+00:00 [scheduled]>[0m
+[[34m2023-09-14 08:58:00,817[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 0/16 running and queued tasks[0m
+[[34m2023-09-14 08:58:00,818[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python scheduled__2023-09-13T00:00:00+00:00 [scheduled]>[0m
+[[34m2023-09-14 08:58:00,823[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='scheduled__2023-09-13T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default[0m
+[[34m2023-09-14 08:58:00,824[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'scheduled__2023-09-13T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 08:58:00,828[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'scheduled__2023-09-13T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 08:58:02,040[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 08:58:03,152[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:03,204[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:05,558[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:05,605[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:07,744[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:07,785[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:09,746[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:09,784[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:11,814[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:11,861[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:13,959[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 08:58:13,959[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 08:58:14,086[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:14,086[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:14,086[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:14,086[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:14,087[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:14,087[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:14,097[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:14,097[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:14,098[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:14,098[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:14,099[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:14,099[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:14,099[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:14,099[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:14,107[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 08:58:14,109[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 08:58:14,164[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 08:58:14,164[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 08:58:14,203[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 08:58:14,280[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_python scheduled__2023-09-13T00:00:00+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 08:58:14,993[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_python run_id=scheduled__2023-09-13T00:00:00+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 08:58:15,017[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=scheduled__2023-09-13T00:00:00+00:00, map_index=-1, run_start_date=2023-09-14 00:58:14.325622+00:00, run_end_date=2023-09-14 00:58:14.509404+00:00, run_duration=0.183782, state=success, executor_state=success, try_number=1, max_tries=0, job_id=43, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-14 00:58:00.819973+00:00, queued_by_job_id=42, pid=8607[0m
+[[34m2023-09-14 08:58:18,307[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date scheduled__2023-09-13T00:00:00+00:00 [scheduled]>[0m
+[[34m2023-09-14 08:58:18,308[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 0/16 running and queued tasks[0m
+[[34m2023-09-14 08:58:18,309[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date scheduled__2023-09-13T00:00:00+00:00 [scheduled]>[0m
+[[34m2023-09-14 08:58:18,311[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='scheduled__2023-09-13T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default[0m
+[[34m2023-09-14 08:58:18,312[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'scheduled__2023-09-13T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 08:58:18,314[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'scheduled__2023-09-13T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 08:58:19,445[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 08:58:20,604[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:20,653[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:23,007[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:23,054[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:25,234[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:25,284[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:27,263[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:27,303[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:29,408[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:58:29,458[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:58:31,540[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 08:58:31,541[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 08:58:31,680[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:31,680[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:31,681[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:31,681[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:31,681[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:31,681[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:58:31,688[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:31,688[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:31,689[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:31,689[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:31,690[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:31,690[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:31,691[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:31,692[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:58:31,692[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 08:58:31,694[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 08:58:31,753[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 08:58:31,753[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 08:58:31,788[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 08:58:31,889[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_date scheduled__2023-09-13T00:00:00+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 08:58:33,457[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_date run_id=scheduled__2023-09-13T00:00:00+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 08:58:33,467[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=scheduled__2023-09-13T00:00:00+00:00, map_index=-1, run_start_date=2023-09-14 00:58:31.939067+00:00, run_end_date=2023-09-14 00:58:33.012441+00:00, run_duration=1.073374, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=44, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 00:58:18.310126+00:00, queued_by_job_id=42, pid=8695[0m
+[[34m2023-09-14 08:58:48,672[0m] {[34mdagrun.py:[0m586} ERROR[0m - Marking run <DagRun events_etl_dag @ 2023-09-13 00:00:00+00:00: scheduled__2023-09-13T00:00:00+00:00, state:running, queued_at: 2023-09-14 00:57:57.001496+00:00. externally triggered: False> failed[0m
+[[34m2023-09-14 08:58:48,674[0m] {[34mdagrun.py:[0m658} INFO[0m - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-13 00:00:00+00:00, run_id=scheduled__2023-09-13T00:00:00+00:00, run_start_date=2023-09-14 00:57:57.049609+00:00, run_end_date=2023-09-14 00:58:48.674046+00:00, run_duration=51.624437, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2023-09-13 00:00:00+00:00, data_interval_end=2023-09-14 00:00:00+00:00, dag_hash=d9d919069b7556fbd0653c34e8a69b52[0m
+[[34m2023-09-14 08:58:48,680[0m] {[34mdag.py:[0m3437} INFO[0m - Setting next_dagrun for events_etl_dag to 2023-09-14T00:00:00+00:00, run_after=2023-09-15T00:00:00+00:00[0m
+[[34m2023-09-14 08:59:19,231[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 08:59:19,233[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 0/16 running and queued tasks[0m
+[[34m2023-09-14 08:59:19,234[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 08:59:19,238[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default[0m
+[[34m2023-09-14 08:59:19,238[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 08:59:19,241[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 08:59:20,261[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 08:59:21,369[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:21,432[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:23,572[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:23,624[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:26,095[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:26,142[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:28,203[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:28,248[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:30,607[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:30,654[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:32,795[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 08:59:32,795[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 08:59:32,941[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:32,941[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:32,942[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:32,942[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:32,942[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:32,942[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:32,948[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:32,948[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:32,949[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:32,949[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:32,950[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:32,950[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:32,951[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:32,951[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:32,951[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 08:59:32,953[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 08:59:33,001[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 08:59:33,002[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 08:59:33,040[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 08:59:33,229[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_python manual__2023-08-08T00:58:47+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 08:59:33,890[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 08:59:33,898[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 00:59:33.269841+00:00, run_end_date=2023-09-14 00:59:33.453747+00:00, run_duration=0.183906, state=success, executor_state=success, try_number=1, max_tries=0, job_id=45, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-14 00:59:19.236301+00:00, queued_by_job_id=42, pid=9802[0m
+[[34m2023-09-14 08:59:36,197[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 08:59:36,198[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 0/16 running and queued tasks[0m
+[[34m2023-09-14 08:59:36,199[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 08:59:36,202[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default[0m
+[[34m2023-09-14 08:59:36,203[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 08:59:36,205[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 08:59:37,257[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 08:59:38,310[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:38,356[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:40,398[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:40,446[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:42,655[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:42,705[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:46,057[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:46,103[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:48,444[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 08:59:48,491[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 08:59:50,798[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 08:59:50,799[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 08:59:50,942[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:50,942[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:50,942[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:50,942[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:50,943[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:50,943[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 08:59:50,949[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:50,949[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:50,950[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:50,950[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:50,950[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:50,950[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:50,951[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:50,951[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 08:59:50,952[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 08:59:50,953[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 08:59:51,006[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 08:59:51,006[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 08:59:51,043[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 08:59:51,135[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_date manual__2023-08-08T00:58:47+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:00:06,807[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:00:06,814[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 00:59:51.184190+00:00, run_end_date=2023-09-14 01:00:06.396874+00:00, run_duration=15.212684, state=success, executor_state=success, try_number=1, max_tries=0, job_id=46, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 00:59:36.200312+00:00, queued_by_job_id=42, pid=9841[0m
+[[34m2023-09-14 09:00:09,087[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:00:09,088[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 0/16 running and queued tasks[0m
+[[34m2023-09-14 09:00:09,089[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:00:09,092[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 5 and queue default[0m
+[[34m2023-09-14 09:00:09,093[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:00:09,095[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:00:10,113[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:00:11,413[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:11,459[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:13,796[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:13,844[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:16,111[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:16,158[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:18,128[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:18,171[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:20,393[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:20,437[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:22,547[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:00:22,548[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:00:22,656[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:22,656[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:22,656[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:22,656[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:22,657[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:22,657[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:22,661[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:22,661[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:22,661[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:22,661[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:22,662[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:22,662[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:22,662[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:22,662[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:22,662[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:00:22,664[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:00:22,702[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:00:22,702[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:00:22,731[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:00:22,790[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_create_table manual__2023-08-08T00:58:47+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:00:30,305[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:00:30,313[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 01:00:22.842396+00:00, run_end_date=2023-09-14 01:00:29.879330+00:00, run_duration=7.036934, state=success, executor_state=success, try_number=1, max_tries=0, job_id=47, pool=default_pool, queue=default, priority_weight=5, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:00:09.091091+00:00, queued_by_job_id=42, pid=9975[0m
+[[34m2023-09-14 09:00:33,153[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:00:33,170[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 0/16 running and queued tasks[0m
+[[34m2023-09-14 09:00:33,172[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:00:33,195[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default[0m
+[[34m2023-09-14 09:00:33,213[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:00:33,217[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:00:34,213[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:00:35,353[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:35,409[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:38,143[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:38,209[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:40,344[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:40,393[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:42,531[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:42,577[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:44,843[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:00:44,888[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:00:47,018[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:00:47,018[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:00:47,161[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:47,161[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:47,161[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:47,161[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:47,162[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:47,162[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:00:47,168[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:47,168[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:47,169[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:47,169[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:47,170[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:47,171[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:47,172[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:47,172[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:00:47,173[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:00:47,175[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:00:47,231[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:00:47,231[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:00:47,264[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:00:47,338[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-08-08T00:58:47+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:00:58,785[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:00:58,794[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 01:00:47.375970+00:00, run_end_date=2023-09-14 01:00:58.321605+00:00, run_duration=10.945635, state=success, executor_state=success, try_number=1, max_tries=0, job_id=48, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:00:33.174772+00:00, queued_by_job_id=42, pid=10143[0m
+[[34m2023-09-14 09:01:01,685[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:01:01,686[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 0/16 running and queued tasks[0m
+[[34m2023-09-14 09:01:01,687[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:01:01,691[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2023-09-14 09:01:01,692[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:01:01,694[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:01:02,849[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:01:04,030[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:04,078[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:06,361[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:06,404[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:08,611[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:08,659[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:10,966[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:11,014[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:13,156[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:13,223[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:15,349[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:01:15,349[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:01:15,493[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:15,494[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:15,494[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:15,494[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:15,494[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:15,494[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:15,499[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:15,500[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:15,500[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:15,500[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:15,501[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:15,501[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:15,502[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:15,502[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:15,502[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:01:15,503[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:01:15,559[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:01:15,559[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:01:15,597[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:01:15,707[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-08-08T00:58:47+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:01:24,144[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:01:24,153[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 01:01:15.754298+00:00, run_end_date=2023-09-14 01:01:23.707637+00:00, run_duration=7.953339, state=success, executor_state=success, try_number=1, max_tries=0, job_id=49, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:01:01.689842+00:00, queued_by_job_id=42, pid=10286[0m
+[[34m2023-09-14 09:01:27,102[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:01:27,103[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 0/16 running and queued tasks[0m
+[[34m2023-09-14 09:01:27,103[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-08-08T00:58:47+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:01:27,106[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_overwrite', run_id='manual__2023-08-08T00:58:47+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2023-09-14 09:01:27,106[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:01:27,109[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-08-08T00:58:47+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:01:27,987[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:01:29,009[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:29,055[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:31,288[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:31,334[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:33,539[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:33,585[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:35,745[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:35,795[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:37,967[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:01:38,015[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:01:40,299[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:01:40,300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:01:40,430[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:40,431[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:40,431[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:40,431[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:40,431[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:40,431[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:01:40,436[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:40,436[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:40,437[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:40,437[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:40,437[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:40,437[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:40,438[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:40,438[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:01:40,439[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:01:40,440[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:01:40,484[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:01:40,485[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:01:40,512[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:01:40,584[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-08-08T00:58:47+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:01:54,152[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_overwrite run_id=manual__2023-08-08T00:58:47+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:01:54,161[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_overwrite, run_id=manual__2023-08-08T00:58:47+00:00, map_index=-1, run_start_date=2023-09-14 01:01:40.619349+00:00, run_end_date=2023-09-14 01:01:53.790971+00:00, run_duration=13.171622, state=success, executor_state=success, try_number=1, max_tries=0, job_id=50, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:01:27.104717+00:00, queued_by_job_id=42, pid=10318[0m
+[[34m2023-09-14 09:01:56,104[0m] {[34mdagrun.py:[0m607} INFO[0m - Marking run <DagRun events_etl_dag @ 2023-08-08 00:58:47+00:00: manual__2023-08-08T00:58:47+00:00, state:running, queued_at: 2023-09-14 00:59:13.000063+00:00. externally triggered: True> successful[0m
+[[34m2023-09-14 09:01:56,105[0m] {[34mdagrun.py:[0m658} INFO[0m - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-08-08 00:58:47+00:00, run_id=manual__2023-08-08T00:58:47+00:00, run_start_date=2023-09-14 00:59:16.069056+00:00, run_end_date=2023-09-14 01:01:56.104943+00:00, run_duration=160.035887, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-08-07 00:00:00+00:00, data_interval_end=2023-08-08 00:00:00+00:00, dag_hash=d9d919069b7556fbd0653c34e8a69b52[0m
+[[34m2023-09-14 09:01:56,109[0m] {[34mdag.py:[0m3437} INFO[0m - Setting next_dagrun for events_etl_dag to 2023-09-13T00:00:00+00:00, run_after=2023-09-14T00:00:00+00:00[0m
+[[34m2023-09-14 09:01:59,026[0m] {[34mdag.py:[0m3437} INFO[0m - Setting next_dagrun for events_etl_dag to 2023-09-14T00:00:00+00:00, run_after=2023-09-15T00:00:00+00:00[0m
+[[34m2023-09-14 09:02:41,782[0m] {[34mscheduler_job.py:[0m1408} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-09-14 09:07:41,940[0m] {[34mscheduler_job.py:[0m1408} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-09-14 09:12:43,094[0m] {[34mscheduler_job.py:[0m1408} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-09-14 09:17:44,071[0m] {[34mscheduler_job.py:[0m1408} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-09-14 09:20:11,442[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:20:11,443[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 3/16 running and queued tasks[0m
+[[34m2023-09-14 09:20:11,443[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_python manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:20:11,446[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_python', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 7 and queue default[0m
+[[34m2023-09-14 09:20:11,447[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:20:11,449[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_python', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:20:12,500[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:20:13,656[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:13,709[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:15,789[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:15,838[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:17,953[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:18,007[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:20,123[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:20,169[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:22,395[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:22,445[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:24,502[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:20:24,502[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:20:24,657[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:24,657[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:24,657[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:24,658[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:24,658[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:24,658[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:24,667[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:24,667[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:24,668[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:24,668[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:24,669[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:24,669[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:24,669[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:24,670[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:24,670[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:20:24,672[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:20:24,730[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:20:24,730[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:20:24,776[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:20:24,912[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_python manual__2023-09-14T01:18:40+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:20:25,668[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_python run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:20:25,676[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_python, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:20:24.955804+00:00, run_end_date=2023-09-14 01:20:25.195366+00:00, run_duration=0.239562, state=success, executor_state=success, try_number=1, max_tries=0, job_id=55, pool=default_pool, queue=default, priority_weight=7, operator=PythonOperator, queued_dttm=2023-09-14 01:20:11.445257+00:00, queued_by_job_id=42, pid=15112[0m
+[[34m2023-09-14 09:20:28,547[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:20:28,548[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 3/16 running and queued tasks[0m
+[[34m2023-09-14 09:20:28,549[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_date manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:20:28,552[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_date', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 6 and queue default[0m
+[[34m2023-09-14 09:20:28,553[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:20:28,556[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_date', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:20:29,651[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:20:30,966[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:31,018[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:33,122[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:33,172[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:35,363[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:35,403[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:37,516[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:37,578[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:39,765[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:20:39,819[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:20:42,024[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:20:42,024[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:20:42,172[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:42,172[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:42,172[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:42,172[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:42,173[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:42,173[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:20:42,178[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:42,178[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:42,178[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:42,178[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:42,179[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:42,179[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:42,180[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:42,180[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:20:42,180[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:20:42,181[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:20:42,233[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:20:42,234[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:20:42,270[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:20:42,348[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_date manual__2023-09-14T01:18:40+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:20:58,423[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_date run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:20:58,433[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_date, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:20:42.393157+00:00, run_end_date=2023-09-14 01:20:57.984373+00:00, run_duration=15.591216, state=success, executor_state=success, try_number=1, max_tries=0, job_id=56, pool=default_pool, queue=default, priority_weight=6, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:20:28.550440+00:00, queued_by_job_id=42, pid=15545[0m
+[[34m2023-09-14 09:21:13,098[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:21:13,099[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 3/16 running and queued tasks[0m
+[[34m2023-09-14 09:21:13,100[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:21:13,105[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_create_table', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 5 and queue default[0m
+[[34m2023-09-14 09:21:13,106[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:21:13,110[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_create_table', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:21:14,270[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:21:15,531[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:15,581[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:17,918[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:17,963[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:20,384[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:20,432[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:22,626[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:22,671[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:25,015[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:25,059[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:27,288[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:21:27,288[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:21:27,420[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:27,420[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:27,420[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:27,420[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:27,421[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:27,421[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:27,426[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:27,426[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:27,427[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:27,427[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:27,427[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:27,428[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:27,428[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:27,428[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:27,429[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:21:27,430[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:21:27,476[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:21:27,477[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:21:27,507[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:21:27,579[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_create_table manual__2023-09-14T01:18:40+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:21:35,486[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_create_table run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:21:35,496[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_create_table, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:21:27.626069+00:00, run_end_date=2023-09-14 01:21:35.048196+00:00, run_duration=7.422127, state=success, executor_state=success, try_number=1, max_tries=0, job_id=57, pool=default_pool, queue=default, priority_weight=5, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:21:13.102414+00:00, queued_by_job_id=42, pid=16169[0m
+[[34m2023-09-14 09:21:37,502[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:21:37,504[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 3/16 running and queued tasks[0m
+[[34m2023-09-14 09:21:37,505[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:21:37,509[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_insert_data', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default[0m
+[[34m2023-09-14 09:21:37,510[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:21:37,513[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_insert_data', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:21:38,369[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:21:39,269[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:39,310[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:41,785[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:41,832[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:44,360[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:44,402[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:46,683[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:46,728[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:50,337[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:21:50,431[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:21:52,885[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:21:52,886[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:21:53,064[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:53,064[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:53,064[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:53,065[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:53,065[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:53,065[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:21:53,072[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:53,072[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:53,073[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:53,073[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:53,073[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:53,074[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:53,074[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:53,074[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:21:53,075[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:21:53,076[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:21:53,134[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:21:53,134[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:21:53,173[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:21:53,317[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_insert_data manual__2023-09-14T01:18:40+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:22:05,923[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_insert_data run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:22:05,932[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_insert_data, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:21:53.359116+00:00, run_end_date=2023-09-14 01:22:05.496430+00:00, run_duration=12.137314, state=success, executor_state=success, try_number=1, max_tries=0, job_id=58, pool=default_pool, queue=default, priority_weight=4, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:21:37.507139+00:00, queued_by_job_id=42, pid=16264[0m
+[[34m2023-09-14 09:22:08,633[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:22:08,634[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 3/16 running and queued tasks[0m
+[[34m2023-09-14 09:22:08,635[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:22:08,637[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_ctas_filter', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2023-09-14 09:22:08,638[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:22:08,640[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_ctas_filter', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:22:09,532[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:22:10,571[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:10,621[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:12,906[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:12,948[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:15,177[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:15,223[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:17,358[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:17,434[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:19,513[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:19,562[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:21,585[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:22:21,586[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:22:21,715[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:21,715[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:21,715[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:21,716[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:21,716[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:21,716[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:21,721[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:21,722[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:21,722[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:21,722[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:21,723[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:21,723[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:21,724[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:21,724[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:21,724[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:22:21,725[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:22:21,772[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:22:21,772[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:22:21,799[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:22:21,861[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_ctas_filter manual__2023-09-14T01:18:40+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:22:29,469[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_ctas_filter run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:22:29,478[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_ctas_filter, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:22:21.895590+00:00, run_end_date=2023-09-14 01:22:29.038003+00:00, run_duration=7.142413, state=success, executor_state=success, try_number=1, max_tries=0, job_id=59, pool=default_pool, queue=default, priority_weight=3, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:22:08.636490+00:00, queued_by_job_id=42, pid=16746[0m
+[[34m2023-09-14 09:22:32,194[0m] {[34mscheduler_job.py:[0m360} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:22:32,196[0m] {[34mscheduler_job.py:[0m425} INFO[0m - DAG events_etl_dag has 3/16 running and queued tasks[0m
+[[34m2023-09-14 09:22:32,197[0m] {[34mscheduler_job.py:[0m511} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-14T01:18:40+00:00 [scheduled]>[0m
+[[34m2023-09-14 09:22:32,199[0m] {[34mscheduler_job.py:[0m550} INFO[0m - Sending TaskInstanceKey(dag_id='events_etl_dag', task_id='task_ods_overwrite', run_id='manual__2023-09-14T01:18:40+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2023-09-14 09:22:32,200[0m] {[34mbase_executor.py:[0m93} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:22:32,203[0m] {[34msequential_executor.py:[0m61} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'events_etl_dag', 'task_ods_overwrite', 'manual__2023-09-14T01:18:40+00:00', '--local', '--subdir', 'DAGS_FOLDER/events_etl_dag.py'][0m
+[[34m2023-09-14 09:22:33,187[0m] {[34mdagbag.py:[0m538} INFO[0m - Filling up the DagBag from /Users/chaopan/workspace/pycharm/mwaa-common/dags/events_etl_dag.py[0m
+[[34m2023-09-14 09:22:34,206[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:34,250[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:36,709[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:36,752[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:39,677[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:39,717[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:42,001[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:42,051[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:44,637[0m] {[34mbase.py:[0m73} INFO[0m - Using connection ID 'aws_default' for task execution.[0m
+[[34m2023-09-14 09:22:44,683[0m] {[34mcredentials.py:[0m1251} INFO[0m - Found credentials in shared credentials file: ~/.aws/credentials[0m
+[[34m2023-09-14 09:22:47,394[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/Users/chaopan/workspace/pycharm/mwaa-common/venv/lib/python3.9/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2023-09-14 09:22:47,395[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:22:47,532[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:47,532[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:47,532[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:47,532[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:47,532[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:47,533[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex[0m
+[[34m2023-09-14 09:22:47,538[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:47,538[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:47,538[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:47,538[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:47,539[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:47,539[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:47,540[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): print_the_context>, log_sql_query already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:47,540[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): log_sql_query>, print_the_context already registered for DAG: example_python_operator[0m
+[[34m2023-09-14 09:22:47,540[0m] {[34mexample_python_operator.py:[0m90} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:22:47,541[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2023-09-14 09:22:47,591[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(_PythonDecoratedOperator): prepare_email>, send_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:22:47,591[0m] {[34mtaskmixin.py:[0m205} WARNING[0m - Dependency <Task(EmailOperator): send_email>, prepare_email already registered for DAG: example_dag_decorator[0m
+[[34m2023-09-14 09:22:47,624[0m] {[34mexample_kubernetes_executor.py:[0m41} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2023-09-14 09:22:47,693[0m] {[34mtask_command.py:[0m388} INFO[0m - Running <TaskInstance: events_etl_dag.task_ods_overwrite manual__2023-09-14T01:18:40+00:00 [queued]> on host 147dda6acd90[0m
+[[34m2023-09-14 09:23:02,864[0m] {[34mscheduler_job.py:[0m602} INFO[0m - Executor reports execution of events_etl_dag.task_ods_overwrite run_id=manual__2023-09-14T01:18:40+00:00 exited with status success for try_number 1[0m
+[[34m2023-09-14 09:23:02,873[0m] {[34mscheduler_job.py:[0m645} INFO[0m - TaskInstance Finished: dag_id=events_etl_dag, task_id=task_ods_overwrite, run_id=manual__2023-09-14T01:18:40+00:00, map_index=-1, run_start_date=2023-09-14 01:22:47.733988+00:00, run_end_date=2023-09-14 01:23:02.444970+00:00, run_duration=14.710982, state=success, executor_state=success, try_number=1, max_tries=0, job_id=60, pool=default_pool, queue=default, priority_weight=2, operator=RedshiftSQLOperator, queued_dttm=2023-09-14 01:22:32.198350+00:00, queued_by_job_id=42, pid=16826[0m
+[[34m2023-09-14 09:23:02,907[0m] {[34mscheduler_job.py:[0m1408} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2023-09-14 09:23:02,913[0m] {[34mscheduler_job.py:[0m1431} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2023-09-14 09:23:05,487[0m] {[34mdagrun.py:[0m607} INFO[0m - Marking run <DagRun events_etl_dag @ 2023-09-14 01:18:40+00:00: manual__2023-09-14T01:18:40+00:00, state:running, queued_at: 2023-09-14 01:20:05.504935+00:00. externally triggered: True> successful[0m
+[[34m2023-09-14 09:23:05,488[0m] {[34mdagrun.py:[0m658} INFO[0m - DagRun Finished: dag_id=events_etl_dag, execution_date=2023-09-14 01:18:40+00:00, run_id=manual__2023-09-14T01:18:40+00:00, run_start_date=2023-09-14 01:20:08.272631+00:00, run_end_date=2023-09-14 01:23:05.488173+00:00, run_duration=177.215542, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-09-13 00:00:00+00:00, data_interval_end=2023-09-14 00:00:00+00:00, dag_hash=d9d919069b7556fbd0653c34e8a69b52[0m
+[[34m2023-09-14 09:23:05,493[0m] {[34mdag.py:[0m3437} INFO[0m - Setting next_dagrun for events_etl_dag to 2023-09-14T00:00:00+00:00, run_after=2023-09-15T00:00:00+00:00[0m
+[[34m2023-09-14 09:28:04,844[0m] {[34mscheduler_job.py:[0m1408} INFO[0m - Resetting orphaned tasks for active dag runs[0m
