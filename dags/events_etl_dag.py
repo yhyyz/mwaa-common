@@ -11,6 +11,7 @@ import re
 import logging
 import pendulum
 from airflow.operators.python import PythonOperator
+from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 
 DAG_ID = os.path.basename(__file__).replace(".py", "")
 
@@ -32,30 +33,21 @@ def get_object(key, bucket_name):
     return content_object
 
 
-# remove sql comments
-def remove_comments(sqls):
-    out = re.sub(r'/\*.*?\*/', '', sqls, re.S)
-    out = re.sub(r'--.*', '', out)
-    return out
-
-
 # s3 content to sqls list
 def get_sql_content(key, bucket_name):
     sqls = get_object(key, bucket_name)
-    _sql = remove_comments(sqls)
-    sql_list = _sql.replace("\n", "").split(";")
+    sql_list = sqls.split(";")
     sql_list_trim = [sql.strip() for sql in sql_list if sql.strip() != ""]
     return list(map(lambda x: x + ";", sql_list_trim))
-
 
 def print_args(**kwargs):
     for k, v in kwargs.items():
         logging.info(f'{k}({type(v)}): {v}')
 
 
-def ds_macro_format(execution_date:pendulum.DateTime, days):
-    # days
-    return execution_date.add(days=days).strftime("%Y-%m-%d")
+def ds_macro_format(execution_date:pendulum.DateTime, days=-1, date_format="%Y%m%d"):
+    # days usage: {{ biz_date(data_interval_end) }} {{ biz_date(data_interval_end,-2) }} {{ biz_date(data_interval_end,-2,"%Y-%m-%d") }}
+    return execution_date.add(days=days).strftime(date_format)
 
 
 user_macros = {
@@ -75,6 +67,12 @@ with DAG(
 ) as dag:
     begin = EmptyOperator(task_id="begin")
     end = EmptyOperator(task_id="end")
+
+    task_seqq = SQLExecuteQueryOperator(
+        conn_id="redshift_default",
+        task_id='task_seqq',
+        sql=get_sql_content("sqls/ods_create_table.sql", sql_bucket)
+    )
 
     # create ods table
     task_ods_create_table = RedshiftSQLOperator(
@@ -120,4 +118,6 @@ with DAG(
     )
 
 
-    begin >> python_operator_task >> task_ods_date >> task_ods_create_table >> task_ods_insert_data >> task_ods_ctas_filter >> task_ods_overwrite >> end
+
+
+    begin >> python_operator_task >> task_ods_date >> task_seqq >> task_ods_create_table >> task_ods_insert_data >> task_ods_ctas_filter >> task_ods_overwrite >> end

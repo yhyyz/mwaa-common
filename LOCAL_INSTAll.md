@@ -17,6 +17,7 @@ airflow users create \
 ```
 3. start
 ```shell
+export  AIRFLOW_HOME=`pwd`
 ps -ef | egrep 'airflow webserver' | grep -v grep | awk '{print $2}' | xargs kill -9
 ps -ef | egrep 'airflow-webserver' | grep -v grep | awk '{print $2}' | xargs kill -9
 ps -ef | egrep 'airflow scheduler' | grep -v grep| awk '{print $2}' | xargs kill -9

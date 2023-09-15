@@ -8,3 +8,5 @@ select 'execution_date format' , '{{ execution_date.strftime("%d-%m-%Y") }}';
 select 'execution_date-5 format', '{{ (execution_date - macros.timedelta(days=5)).strftime("%Y-%m-%d") }}';
 select 'data_interval strftime', '{{ data_interval_start.strftime("%d-%m-%Y") }}', '{{ data_interval_end.strftime("%d-%m-%Y") }}';
 select 'biz_date' ,'{{ biz_date(data_interval_end, days=-1) }}';
+select 'biz_date default' ,'{{ biz_date(data_interval_end) }}';
+select 'biz_date default -2' ,'{{ biz_date(data_interval_end,-2) }}';

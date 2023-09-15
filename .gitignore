@@ -35,6 +35,8 @@ build.log
 .svn
 .CVS
 .hg*
+./dags/single-dependency/_*.pycache
+./dags/single-dependency/**/*.pyc
 
 # switch to regexp syntax.
 #  syntax: regexp
@@ -44,3 +46,4 @@ metastore_db/
 derby.log
 .DS_Store
 dags/*.pyc
+zlocal/
