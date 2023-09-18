@@ -36,7 +36,11 @@ build.log
 .CVS
 .hg*
 ./dags/single-dependency/_*.pycache
-./dags/single-dependency/**/*.pyc
+./dags/single-dependency/*.pyc
+./dags/*.pyc
+dags/__pycache__/
+dags/single-dependency/__pycache__/
+
 
 # switch to regexp syntax.
 #  syntax: regexp
